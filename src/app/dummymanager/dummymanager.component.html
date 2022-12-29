@@ -1,0 +1,42 @@
+<!-- <pre>
+    {{allContacts | json}}
+</pre> -->
+<nav class="navbar navbar-light bg-dark titu">
+    <div class="container ">
+                <a class="navbar-brand text-primary m-auto" >
+                <i class="fa-regular fa-user"></i>&nbsp;
+                Dummy Contact Manager
+              </a>
+     
+    </div>
+  </nav>
+  
+  <div class="container mt-5 ">
+
+    <div class="row mb-5">
+        <div class="col-md-6 mt-3" *ngFor="let contact of allContacts">
+            <div class="card list-group-item-secondary bg-dark">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-4">&nbsp;&nbsp;
+                            <img height="150px" width="130px" [src]="contact.image" alt="no" class="contactimage">
+                        </div>
+
+                        <div class="col-md-7">
+                            <ul class="list-group">
+                                <li class="list-group-item">{{contact.firstName}}</li>
+                                <li class="list-group-item">{{contact.email}}</li>
+                                <li class="list-group-item">{{contact.phone}}</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  </div>
+  
