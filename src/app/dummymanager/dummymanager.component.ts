@@ -14,13 +14,14 @@ export class DummymanagerComponent implements OnInit{
   constructor(private api:ApiService){}
 
   ngOnInit(){
-
     this.api.apiCall()
     .subscribe((data:any)=>{
       console.log(data.users)
       this.allContacts=data.users
     })
-
   }
+
+  
+
 
 }
